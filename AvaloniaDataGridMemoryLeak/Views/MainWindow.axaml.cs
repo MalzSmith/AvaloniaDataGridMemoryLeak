@@ -22,10 +22,7 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     private void CreateButton_OnClick(object? sender, RoutedEventArgs e)
     {
         CreateButton.IsVisible = false;
-        ContentGrid.Children.Add(new ReusedView()
-        {
-            DataContext = DataContext // is this necessary? I have no idea...
-        });
+        ContentGrid.Children.Add(new ReusedView());
 
         ContentPanel.IsVisible = true;
     }
